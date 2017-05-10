@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.ninestack.sampleslider.ScrollingActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:background="@drawable/placeholder"
+                    android:scaleType="fitXY"
+                    android:clipToPadding="false"/>
+
+                <!--<ImageButton
+                    android:id="@+id/btn_nav"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentLeft="@id/pager"
+                    android:layout_marginTop="16dp"
+                    app:srcCompat="@drawable/back_arrow"
+                    style="@style/Widget.AppCompat.ActionButton" />-->
+
+                <ImageButton
+                    android:id="@+id/left_nav"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerInside"
+                    android:background="#80ffffff"
+                    app:srcCompat="@drawable/arrow_right"
+                    android:padding="5dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <ImageButton
+                    android:id="@+id/right_nav"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:background="#80ffffff"
+                    android:scaleType="centerInside"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/arrow_left"
+                    android:layout_alignTop="@+id/left_nav"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <!--  <android.support.design.widget.TabLayout
+                      android:id="@+id/tabs"
+                      android:layout_width="match_parent"
+                      android:layout_height="100dp"
+                      app:tabSelectedTextColor="@color/colorAccent"
+                      app:tabIndicatorHeight="3dp"
+                      app:tabBackground="@color/white"
+                      android:layout_below="@+id/pager"
+                      app:tabIndicatorColor="@color/colorAccent"
+                      app:tabGravity="center"
+                      android:visibility="invisible"
+                      app:tabMode="scrollable"
+                      app:layout_scrollFlags="scroll|enterAlways" />-->
+
+                <!-- <HorizontalScrollView
+                     android:id="@+id/menuScroll"
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:background="@color/white"
+                     android:visibility="gone"
+                     android:layout_below="@+id/pager">
+
+                     <LinearLayout
+                         android:orientation="horizontal"
+                         android:layout_height="match_parent"
+                         android:layout_width="match_parent"
+                         android:id="@+id/thumbnails"
+                         android:visibility="gone"
+                         android:paddingTop="0dp"
+                         android:gravity="center_vertical"/>
+
+                 </HorizontalScrollView>-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerviewFrag"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorAccent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pager"
+                    android:paddingTop="1dp"/>
+
+            </RelativeLayout>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_scrolling" />
+<!--
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+</android.support.design.widget.CoordinatorLayout>

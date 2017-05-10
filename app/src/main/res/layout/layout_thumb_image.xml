@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/imgDisplay"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_margin="1dp"
+        android:src="@drawable/placeholder"
+        android:scaleType="centerCrop" />
+
+   <!-- <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="#ffffff"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Close" />-->
+
+  <!--  <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        android:id="@+id/btnClose" />-->
+</RelativeLayout>
