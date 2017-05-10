@@ -34,6 +34,7 @@ public class ScrollingActivity extends AppCompatActivity {
     ViewPager _pager;
     ImageButton leftBtn,rightBtn;
     RecyclerView myList;
+    private List<String> _images;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +51,7 @@ public class ScrollingActivity extends AppCompatActivity {
         Assert.assertNotNull(_images);
         GalleryPagerAdapter _adapter = new GalleryPagerAdapter( this);
         _pager.setAdapter(_adapter);
-        //_pagerThumb.setAdapter(_adapter);
+
         _pager.setOffscreenPageLimit(4); // how many images to load into memory
         _adapter.notifyDataSetChanged();
         HorizontalAdapter horizontalAdapter = new HorizontalAdapter(_images);
@@ -225,7 +226,7 @@ public class ScrollingActivity extends AppCompatActivity {
             container.removeView((LinearLayout) object);
         }
     }
-    private List<String> _images;
+
     private class OnImageClickListener implements View.OnClickListener {
         int _postion;
         // constructor
